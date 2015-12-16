@@ -21,6 +21,16 @@ public class MainSetup implements Setup
 		Daos.createTablesInPackage(dao, "net.wendal.nutzbook", false);
 		ioc.get(NutQuartzCronJobFactory.class);
 		// 初始化默认根用户
+		System.out.println("1====>" + System.currentTimeMillis());
+		try
+		{
+			Thread.sleep(1000L);
+		} catch (InterruptedException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("1====>" + System.currentTimeMillis());
 		if (dao.count(User.class) == 0)
 		{
 			User user = new User();

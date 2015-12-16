@@ -1,1 +1,6 @@
+/custom/
+/ioc/
+/log4j.properties
+/mvc/
 /net/
+/quartz.properties
